@@ -1,4 +1,9 @@
-//1.Use the rest countries' API URL ->https://restcountries.com/v3.1/all and disply all the country flags in the console.
+//1. How to compare two json have the same properties without order.
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+let a=JSON.stringify(obj1)===JSON.stringify(obj2);
+console.log(a);
+//2.Use the rest countries' API URL ->https://restcountries.com/v3.1/all and disply all the country flags in the console.
 
 var request1=new XMLHttpRequest();
 request1.open("GET","https://restcountries.com/v3.1/all",true)
@@ -11,7 +16,7 @@ request1.onload=function(){
     }
 }
 //------------------------------------
-//2.Use the same rest countries ans print all countries names, regions, sub-region and populations.
+//3.Use the same rest countries ans print all countries names, regions, sub-region and populations.
 
 var request=new XMLHttpRequest();
 request.open("GET","https://restcountries.com/v3.1/all",true)
